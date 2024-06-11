@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akshay K M</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script rel="JavaScript" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+</head>
+<body>
+
+<div id="header">
+    <div class="container">
+        <div class="menu-toggle">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+        <nav>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#extra-curricular-activities">Extracurricular Activities</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-text">
+            <h1><span id="name"> </span><br></h1>
+            <p id="description"></p>
+        </div>
+    </div>
+</div>
+
+<!-- -----------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <h1 class="sub-title">About Me</h1><br>
+            <div class="about-col-1">
+                    <div class="left">
+                        <img src="images/user.png">
+                    </div>
+                    <div class="rigth">
+                        <p id="justify">An experienced IT professional with a diverse background in the industry, I excel in problem-solving and collaboration across cross-functional teams. Committed to continuous learning, I stay updated with emerging technologies and seek opportunities to contribute to innovative projects in the IT field. Outside of work, I actively engage in volunteer initiatives promoting cleanliness, digital literacy, and education, reflecting my commitment to community involvement and sustainability.</p>
+                    </div>
+            </div><br>
+            <div class="about-col-2">
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>HTML, CSS, JavaScript</li>
+                        <li><span>Web Development</span><br>Java, JDBC, Springboot, Python, Django, SQL, Linux</li>
+                        <li><span>Salesforce Administrator</span><br>Salesforce Platform Knowledge, User Management, Data Management, Customization, Workflow Automation, Reports and Dashboards, AppExchange</li>
+                        <li><span>SeriveMax Administrator</span><br>ServiceMax Configuration, Work Order Management, Mobile Configuration, Parts and Inventory Management, Contract Management</li>
+                        <li><span>Salesforce Service Cloud Consultant</span><br>Case Management, Omni-Channel Support, Knowledge Management, Service Console Customization, Analytics and Reporting</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2023 - Current</span><br><br>Associate System Engineer - Trainee<br id="justify"><br> Salesforce Developer,specializing in sales. My role involves leveraging Salesforce technologies to optimize sales processes and enhance customer experiences. With a keen focus on innovation and efficiency, I strive to deliver solutions that drive business growth and client satisfaction.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2019-2023</span><br>Electronics and Communication Engineering<br>Government Engineering College<br>Bedarapura, Chamarajanagara<br>CGPA: 8.97</li>
+                        <li><span>2016-2018</span><br>PCMB<br>Pre-University Education<br>Governmnet PU College<br>Bannuru, Mysore<br>Percentage: 83.67</li>
+                        <li><span>2015-2016</span><br>SSLC<br>Government High School<br>Kethupura, Mysore<br>Percentage: 90.24</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ---------Projects---------------- -->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="projects-list">
+            <div>
+                <i class="fa fa-lock"></i>
+                <h2>Hex-Password based door lock security system</h2>
+                <p id="justify"><u>Tools & Technologies</u>: Verilog HDL, Security System, Testing and Validation, Basic Gates, Proteus software, Xilinx software<br><br>
+                    Designed and implemented a secure door lock system using Verilog HDL and combinational circuitry. Developed logic for hexadecimal password
+                    comparison and door unlocking, ensuring robust security measures. Tested and debugged the system for reliable performance, showcasing
+                    proficiency in digital design and security principles.</p>
+            </div>
+            <div>
+                <i class="fa fa-plus-square"></i>
+                <h2>Analysis of AOI and OAI Binary Tree Adders</h2>
+                <p id="justify"><u>Tools & Technologies</u>: Verilog HDL, Testing and Validation, Basic Gates, Binary Tree Adders, Xilinx software<br><br>
+                    The comparison results shows that the proposed RCA provides better efficiency in terms of area, delay and energy than the existing RCA. showcasing
+                    superior speed and lower power consumption. This highlights the importance of considering both area utilization and performance metrics such as
+                    delay and energy efficiency in evaluating binary tree adder designs.</p>
+            </div>
+            <div>
+                <i class="fab fa-app-store"></i>
+                <h2>Electricity Web site Development</h2>
+                <p id="justify"><u>Tools & Technologies</u>: Python, Flask, HTML, CSS, Agile, Java Script, SQL, VS code <br><br>
+                    The end-to-end electricity bill payment platform I conceptualized and developed streamlines user transactions with seamless efficiency. Its complaint
+                    registration admin panel enhances user support by facilitating efficient complaint management and resolution. With a robust SQL database schema,
+                    user data, billing information, payments, and complaints are securely stored. Leveraging Python with Flask, RESTful APIs manage user interactions
+                    and data retrieval while intuitive HTML, CSS, and JavaScript interfaces ensure a smooth user experience. Integration of AJAX for asynchronous
+                    request handling enhances responsiveness, and stringent authentication mechanisms prioritize data security for both users and administrators.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ----------certifications------------ -->
+<div id="certifications">
+    <div class="container">
+        <h1 class="sub-title">Certifications</h1><br><br>
+        <div class="certifications-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Certified Salesforce Administrator</h3>
+                    <p>The Salesforce Admin certification verifies skills in configuring and managing Salesforce, pivotal for system administration and CRM management roles.</p>
+                    <a href="https://drive.google.com/file/d/1Eo-xw9og9KHyRW1P33UMSH3pP10Yuu3u/view?usp=sharing"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Certified ServiceMax Administrator</h3>
+                    <p>The ServiceMax Admin certification showcases proficiency in configuring and administering ServiceMax, vital for optimizing service operations and boosting customer satisfaction in field service management.</p>
+                    <a href="https://drive.google.com/file/d/1UqGohRb6rrCq8MnKuJ5XaaUkhW_XOf2a/view?usp=sharing%20"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.jpg">
+                <div class="layer">
+                    <h3>Java full-stack Web Developer</h3>
+                    <p>The Full Stack course by Tap Academy Bangalore equips learners with both front-end and back-end development skills in Java, enabling them to build end-to-end web applications.</p>
+                    <a href="https://drive.google.com/file/d/1yV9CQIh5UUdHNNXAUYGy0DWsvw_H2FBb/view?usp=sharing"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work hidden">
+                <img src="images/work-4.jpg">
+                <div class="layer">
+                    <h3>Python programming</h3>
+                    <p>The Python Programming course at Apponix Academy offers comprehensive training in Python, covering fundamental concepts and advanced topics, empowering learners to become proficient Python developer.</p>
+                    <a href="https://drive.google.com/file/d/1iOeyOTjSlHDuC7BBIEaSjKfGAn6MJ6Eg/view?usp=sharing"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div><br><br>
+        <a class="btn" id="showMoreBtn">See more</a>
+    </div>
+</div>
+
+<!----------------------extra-curricular-activities-------------------------->
+<div id="extra-curricular-activities">
+    <div class="container">
+        <h1 class="sub-title">Extracurricular Activities</h1>
+        <div class="extra-curricular-activities-list">
+            <div>
+                <i class="fab fa-angellist"></i>
+                <h2>Volunteer Work</h2>
+                <p id="justify"><span><u>Bharath Initiative</u><br>Actively contribute to the Swachh Bharat Abhiyan, a national cleanliness campaign, by organizing and participating
+                    in community clean-up drives, promoting awareness about sanitation practices, and fostering a cleaner and healthier environment.</span><br><br>
+                <span><u>Digital India Initiative</u><br>Volunteer for the Digital India initiative by assisting local communities in digital literacy programs, conducting
+                    workshops on internet usage and digital skills, and empowering individuals to harness technology for personal and professional development.</span><br><br>
+                <span><u>Supporting Local Schools</u></span><br>Collaborate with local schools to improve academic outcomes by providing tutoring and mentoring support to
+                    students, organizing educational workshops, and implementing initiatives to enhance learning resources and infrastructure.
+                    Clubs and Organizations
+                </span></p>
+            </div>
+            <div>
+                <i class="fab fa-cc-diners-club"></i>
+                <h2>Clubs and Organizations</h2>
+                <p id="justify"><span><u>Energy Conservation Club (ECC)</u><br>As a founding member and organizer of the Energy Conservation Club (ECC), I spearheaded initiatives
+                    focused on promoting energy conservation and sustainability within the community. In my role as an event coordinator, I meticulously planned and
+                    executed various activities such as essay writing competitions, quizzes, and knowledge-sharing sessions, all centered around renewable energy sources
+                    like solar power.</span></p>
+            </div>
+            <div>
+                <i class="fab fa-houzz"></i>
+                <h2>Hobbies and Interests</h2>
+                <p id="justify"><span><u>Coding Practice</u><br>PracticeRegularly engage in coding practice sessions to enhance problem-solving skills and stay updated with programming languages
+                    such as Python, Java, and JavaScript.</span><br><br>
+                <span><u>Watching Documentary Movies</u><br>about watching documentary films, particularly those focused on technology, science, and history,
+                    to gain insights into diverse subjects and stay informed about current affairs.</span><br><br>
+                <span><u>Continuous Learning</u><br>Dedicated to lifelong learning, consistently exploring new skills and topics through online courses, workshops, and self-
+                    study to broaden knowledge and adapt to evolving industry trends.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ----------contact------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa fa-paper-plane"></i>km.akshay2001@gmail.com</p>
+                <p><i class="fa fa-phone-square-alt"></i>+91 9964233286</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/a_k_s_h_a_y_km_gowda?igsh=Z3RyMnBwMnRybmtw"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/akshay-k-m-969389258/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/AkShAyKm25"><i class="fab fa-github"></i></a>
+                    <a href="https://www.hackerrank.com/profile/akshaykm252001"><i class="fa-brands fa-hackerrank"></i></a>
+                    <a href="https://www.salesforce.com/trailblazer/akshay-k-m"><i class="fa-brands fa-salesforce"></i></a>
+                </div><br>
+                <button type="submit"><a href="images/Akshay_Resume.pdf" download class="btn btn2">Download CV</a></button>
+
+            </div><br>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <footer>
+            <p>&copy; <span id="copyright-year"></span> Akshay K M. All rights reserved.</p>
+          </footer>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+
