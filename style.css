@@ -1,573 +1,486 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    color: #333;
     background-color: #f4f4f4;
-    height: 100vh; 
+    color: #333;
 }
 
-/* Navigation Bar */
-
-.menu-toggle {
-    display: block;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    padding: 10px;
-    text-align: right;
-    z-index: 1001; /* Ensure it's above the navigation */
-}
-
-.menu-toggle i {
-    font-size: 24px;
-}
-
-nav {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    padding: 15px 0;
-    background-image: url('https://i.pinimg.com/originals/0e/39/c2/0e39c256714a4b7c0299323a82701647.jpg');
-    background-size: cover; 
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-
-/* Container Adjustment for Fixed Navigation */
 .container {
     width: 80%;
-    margin: 60px auto 0;
-    padding: 20px;
+    margin: auto;
+    overflow: hidden;
 }
 
 /* Header Styles */
 #header {
-    background-image: url('https://i.pinimg.com/originals/0e/39/c2/0e39c256714a4b7c0299323a82701647.jpg');
-    background-size: cover; 
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fff;
-    padding: 60px 0 40px;
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
+    position: relative;
+    overflow: hidden; /* Prevent overlap issues */
+}
+
+.menu-toggle {
+    display: none; /* Hidden for desktop */
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end; /* Align navigation items to the right */
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    display: flex; /* Use flexbox for horizontal layout */
+    margin: 0; /* Remove default margin */
+}
+
+nav ul li {
+    display: inline-block; /* Align items horizontally */
+    margin: 0 15px; /* Space between items */
+    padding: 10px 15px; /* Padding for better click area */
+    background: none; /* No background color */
+    border: none; /* Remove border */
+    border-radius: 0; /* No rounding */
+    color: #333; /* Text color */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Add hover effect if desired */
+nav ul li:hover {
+    color: #007BFF; /* Change color on hover */
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 10px; /* Keep this for spacing */
+    transition: background 0.3s;
+    /* Removed border-radius */
+}
+
+nav ul li a:hover {
+    background: #007BFF; /* Change background on hover */
+}
+
+.header-text {
     text-align: center;
+    padding: 20px;
 }
 
-#header .header-text h1 {
-    font-size: 36px;
+.header-text h1 {
+    font-size: 2.5rem;
 }
 
-#header .header-text p {
-    font-size: 18px;
-}
+
 
 /* About Section */
-
-#about  .about-col-1{
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#about {
+    padding: 50px 0;
+    background: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
-#about .container {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-
-#about img {
-    display: block;
-    object-fit: cover;
-    object-position: center;
-    height: 600px;
-    width: 500px;
-    margin-right: 50px;
-}
-
-#about .about-col-2 {
-    flex: 1;
-    padding: 20px;
-}
-
-#about .sub-title {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-#about .tab-titles {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-}
-
-#about .tab-titles .tab-links {
-    cursor: pointer;
-    padding: 10px 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    transition: background-color 0.3s ease;
-}
-
-#about .tab-titles .tab-links.active-link {
-    background-color: #ff9966;
-    color: #fff;
-}
-
-#about .tab-contents {
-    display: none;
-}
-
-#about .tab-contents.active-tab {
-    display: block;
-}
-
-
-/* Projects Section */
-#projects {
-    background-color: #fff;
-    padding: 40px 0;
-}
-
-#projects .sub-title {
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#projects .projects-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-#projects .projects-list div {
-    flex: 1;
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
-}
-
-#projects .projects-list div:hover {
-    background-color: #ff9966;
-    color: #fff;
-}
-
-/* Certification Section */
-.certifications-list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+.about-me {
+    text-align: justify;   /* Justify the text */
+    line-height: 1.6;      /* Improved line spacing for readability */
+    margin: 20px 0;        /* Vertical spacing around the paragraph */
+    padding: 0 15px;       /* Horizontal padding for better alignment */
+    max-width: 800px;      /* Maximum width for better readability */
+    margin-left: auto;     /* Center the paragraph */
+    margin-right: auto;    /* Center the paragraph */
 }
 
 .sub-title {
-    text-align: center; /* Center the heading */
-}
-
-.work {
-    width: calc(25% - 20px); /* Adjust width for responsiveness */
+    text-align: center;
+    font-size: 2rem;
     margin-bottom: 20px;
-    position: relative;
 }
 
-.work img {
-    width: 100%;
-    border-radius: 6px;
-    transition: transform 0.3s ease;
+/* Flex Container Adjustments */
+.about-col-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px; /* Add margin for spacing */
 }
 
-.work:hover img {
-    transform: scale(1.1);
+.about-col-1 .left {
+    margin-right: 20px;
 }
 
-.layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 6px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+.about-col-1 img {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    border: 3px solid #35424a; /* Add a border for emphasis */
 }
 
-.work:hover .layer {
-    opacity: 1;
+/* Tab Titles */
+.tab-titles {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-.layer h3 {
-    font-size: 16px; /* Reduce font size */
-    margin-bottom: 10px;
-    color: #fff; /* Text color */
-    text-align: center; /* Center the title */
-}
-
-.layer p {
-    font-size: 14px;
-    margin-bottom: 10px;
-    color: #fff; /* Text color */
-}
-
-.layer a {
-    display: block;
-    text-align: center;
-    color: #ff004f; /* Link color */
-    text-decoration: none;
-    margin-top: 10px;
-    transition: color 0.3s ease;
-}
-
-.layer a:hover {
-    color: #e60046; /* Darker shade on hover */
-}
-
-#showMoreBtn {
-    width: 100%;
-    text-align: center;
-    color: #fff; /* Button text color */
-    background-color: #ff004f; /* Button background color */
-    padding: 10px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-#showMoreBtn:hover {
-    background-color: #e60046; /* Darker shade on hover */
+.tab-links {
     cursor: pointer;
+    padding: 10px 20px;
+    border: 1px solid #35424a;
+    background: #e4e4e4;
+    margin: 0 5px;
+    transition: background 0.3s;
 }
 
-
-/* Extra Curricular Activities Section */
-#extra-curricular-activities {
-    background-color: #fff;
-    padding: 40px 0;
+.tab-links:hover,
+.tab-links.active-link {
+    background: #35424a;
+    color: #ffffff;
 }
 
-#extra-curricular-activities .sub-title {
-    font-size: 24px;
+/* Tab Contents */
+.tab-contents {
+    display: none; /* Hide all by default */
+    padding: 20px; /* Add padding for better spacing */
+    border: 1px solid #e4e4e4; /* Add border to tab content */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.tab-contents.active-tab {
+    display: block; /* Show active tab */
+}
+
+/* Common Styles for Skills, Education, Experience, and Projects */
+.skills-title, .projects-title, .experience-title, .education-title {
     text-align: center;
+    font-size: 2rem;
     margin-bottom: 20px;
 }
 
-#extra-curricular-activities .extra-curricular-activities-list {
+/* Skills, Education, Experience List Styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd; /* Add border for better separation */
+    border-radius: 5px;
+    background: #f9f9f9; /* Light background for each list item */
+    transition: background-color 0.3s;
+}
+
+li:hover {
+    background-color: #f0f0f0; /* Highlight on hover */
+    border-left: 4px solid #007BFF; /* Highlight left border */
+}
+
+.skill-section {
+    text-align: center; /* Center the skill title */
+    margin-bottom: 30px; /* Space between sections */
+}
+
+.skill-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px; /* Space below skill title */
+}
+
+.bubbles {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    justify-content: center; /* Center bubbles inside */
+    gap: 10px; /* Space between bubbles */
 }
 
-#extra-curricular-activities .extra-curricular-activities-list div {
-    flex: 1;
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
+.bubbles span {
+    background: #e4f0f5;
+    color: #35424a;
+    padding: 5px 10px;
+    border-radius: 15px;
 }
 
-#extra-curricular-activities .extra-curricular-activities-list div:hover {
-    background-color: #ff9966;
-    color: #fff;
+/* Education Section */
+#education {
+    padding: 50px 0;
+    background: #ffffff;
 }
 
-/* Contact Section Styles */
-#contact {
-    background-color: #fff;
-    padding: 40px 0;
-    text-align: center; /* Center align the contact section */
+.education-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
-#contact .container {
+.education-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Space between education boxes */
+}
+
+.education-box {
+    background: #35424a; /* Box color */
+    color: #ffffff;
+    padding: 20px; /* Space inside the box */
+    border-radius: 8px; /* Rounded corners */
+    flex: 1 1 calc(30% - 30px); /* Three boxes per row */
+    text-align: left; /* Left-aligned text */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+/* Projects Section */
+#projects {
+    padding: 50px 0;
+    background: #e4e4e4;
+}
+
+.projects-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px;
 }
 
-#contact .contact-left {
-    flex-basis: 45%;
-    text-align: left; /* Align content to the left */
+.projects-list div {
+    background: #ffffff;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    flex: 1 1 calc(30% - 30px);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-#contact .contact-left h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-#contact .contact-left p {
-    margin-top: 20px;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-}
-
-#contact .contact-left p i {
-    color: #ff004f;
-    margin-right: 10px; /* Adjusted margin */
-    font-size: 25px;
-}
-
-#contact .social-icons {
-    margin-top: 20px;
-    display: flex;
-    justify-content: flex-start; /* Align icons to the left */
-}
-
-#contact .social-icons a {
-    text-decoration: none;
-    font-size: 24px;
-    margin-right: 20px; /* Adjusted margin */
-    color: #ababab;
-    transition: transform 0.5s;
-}
-
-#contact .social-icons a:last-child {
-    margin-right: 0; /* Remove margin from last icon */
-}
-
-#contact .social-icons a:hover {
-    color: #ff004f;
+.projects-list div:hover {
     transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
-#contact .contact-right {
-    flex-basis: 45%;
+.projects-list div h2 {
+    margin: 10px 0;
 }
 
-#contact .contact-right h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+/* Certifications Section */
+#certifications {
+    padding: 50px 0;
+    background: #f4f4f4;
 }
 
-#contact .contact-right form input,
-#contact .contact-right form textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 15px;
-    border: 0;
-    outline: none;
-    background: #262626;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 6px;
+.certifications-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-/* Adjusted styles for the "Download CV" button */
-#contact .contact-right .btn2 {
-    background: #ff004f; /* Blue color for the button */
-    padding: 14px 30px;
-    font-size: 18px;
-    margin-top: 20px; /* Add gap to the button */
-    cursor: pointer;
-    text-decoration: none;
-    color: #fff;
-    border-radius: 6px;
-    margin-left: 0; /* Align to the left */
+.certifications-list .work {
+    position: relative;
+    overflow: hidden;
+    margin: 15px;
+    flex: 1 1 calc(25% - 30px); /* Adjusted to handle more items gracefully */
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
+    text-align: center;
 }
 
-#contact .msg {
-    margin-top: 20px;
-    color: #ff004f;
-    font-size: 18px;
-    font-weight: bold;
+.certifications-list .work img {
+    max-width: 80%;
+    height: auto;
+    margin: 10px 0;
 }
 
-/* Button Style */
-button[type="submit"] {
-    background: none;
-    border: none;
-    padding: 0;
+.certifications-list .layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    padding: 10px;
+    transition: transform 0.3s;
+    transform: translateY(100%);
+}
+
+.certifications-list .work:hover .layer {
+    transform: translateY(0);
+}
+
+.certifications-list .layer h3 {
+    font-size: 1rem;
+    margin: 0 0 5px 0;
+}
+
+.certifications-list .layer p {
+    font-size: 0.8rem;
     margin: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-    /* Align the button to the left */
 }
 
-button[type="submit"] a {
-    display: inline-block; /* Display as block */
-    padding: 14px 30px;
-    font-size: 18px;
+/* Hidden section for additional certifications */
+.hidden {
+    display: none;
+}
+
+#showMoreBtn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border-radius: 4px;
     text-decoration: none;
-    color: #fff;
-    background-color: #ff004f; /* New color */
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
-button[type="submit"] a:hover {
-    background-color: #e60046; /* Darker shade on hover */
+#showMoreBtn:hover {
+    background-color: #555;
+}
+
+/* Volunteer Work Section */
+#volunteer-work {
+    padding: 50px 0;
+    background: #e4e4e4;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 0;
+    background: #f8f9fa;
+}
+
+.contact-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact-left, .contact-right {
+    flex: 1;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+.contact-left p, .contact-left .social-icons {
+    margin: 10px 0;
+}
+
+.social-icons a {
+    margin-right: 10px;
+    color: #333;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-right input, 
+.contact-right textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-right button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-right button:hover {
+    background: #0056b3;
+}
+
+.btn2 {
+    background: #28a745; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding for better size */
+    border-radius: 1px; /* Slightly rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    transition: background 0.3s; /* Smooth background change */
+    margin-top: 1px; /* Space above the button */
+    text-align: center; /* Center text */
+    display: inline-block; /* Ensure it behaves like a block element */
+}
+.btn2:hover {
+    background: #218838; /* Darker green on hover */
 }
 
 
-
-/* Footer */
+/* Footer Styles */
 footer {
+    background: #35424a;
+    color: #ffffff;
     text-align: center;
     padding: 10px 0;
-    color: #fff;
-    background-image: url('https://i.pinimg.com/originals/0e/39/c2/0e39c256714a4b7c0299323a82701647.jpg');
-    background-size: cover; 
-    background-position: center;
-    background-repeat: no-repeat;
+    position: relative;
 }
 
+footer p {
+    margin: 0;
+}
 
-/* Small Screen Styles */
-@media screen and (max-width: 768px) {
-    /* Adjust navigation bar for small screens */
+/* Responsive Styles */
+@media (max-width: 768px) {
     .menu-toggle {
-        display: block;
-        position: absolute;
-        top: 15px; /* Adjust the top position */
-        right: 20px; /* Adjust the right position */
-        z-index: 1001; /* Ensure it's above the nav */
+        display: block; /* Show toggle button for mobile */
     }
-    
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start; /* Align items to the left */
-        display: none;
-        position: fixed; /* Position fixed to keep it fixed */
-        top: 0; /* Align to the top */
-        right: 20px; /* Align to the right with some distance */
-        background: linear-gradient(to right, #ff9966, #ff5e62);
-        padding: 15px 20px; /* Adjust padding */
-        border-radius: 0 0 10px 10px; /* Rounded corners for bottom */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow */
-    }
-    
 
-    nav ul li {
-        margin: 10px 0;
+    nav ul {
+        display: none; /* Hide menu by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #35424a;
+        width: 100%;
     }
 
     nav ul.active {
-        display: flex;
+        display: flex; /* Show menu when active */
     }
 
-    /* Adjust container for small screens */
-    .container {
-        width: 90%;
-        margin: 80px auto 0;
+    nav ul li {
+        margin: 10px 0; /* Adjust margins for mobile */
     }
 
-    /* Adjust about section for small screens */
-    #about .about-col-1 {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    .about-col-1 {
+        flex-direction: column; /* Stack items vertically on mobile */
     }
 
-    #about img {
-        width: 100%;
-        height: auto;
-        margin: 0 0 20px 0;
+    .contact-row {
+        flex-direction: column; /* Stack columns on mobile */
     }
 
-    /* Adjust tab titles and contents for small screens */
-    #about .about-col-2 {
-        padding: 10px; /* Reduced padding for mobile view */
+    .contact-left, .contact-right {
+        margin: 0; /* Remove margin for mobile */
+        width: 100%; /* Full width on mobile */
     }
 
-    #about .sub-title {
-        font-size: 20px; /* Reduced font size for mobile view */
-        margin-bottom: 10px; /* Reduced margin for mobile view */
+    .certifications-list .work {
+        flex: 1 1 100%; /* Full width for certifications on mobile */
     }
 
-    #about .tab-titles {
-        margin-bottom: 10px; /* Reduced margin for mobile view */
+    .projects-list div {
+        flex: 1 1 100%; /* Full width for projects on mobile */
     }
-
-    #about .tab-titles .tab-links {
-        padding: 5px 10px; /* Reduced padding for mobile view */
-        font-size: 14px; /* Reduced font size for mobile view */
-    }
-    /* Adjust projects section for small screens */
-    #projects .projects-list {
-        flex-direction: column;
-    }
-
-    #projects .projects-list div {
-        margin-bottom: 20px;
-    }
-
-    /* Adjust certifications section for small screens */
-    .certifications-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .work {
-        width: calc(50% - 10px); /* Adjust width for two columns with some gap */
-        margin-bottom: 20px;
-    }
-
-    .layer {
-        padding: 15px;
-    }
-
-    /* Adjust extra-curricular activities section for small screens */
-    #extra-curricular-activities .extra-curricular-activities-list {
-        flex-direction: column;
-    }
-
-    #extra-curricular-activities .extra-curricular-activities-list div {
-        margin-bottom: 20px;
-    }
-
-    /* Adjust contact section for small screens */
-    #contact .container {
-        flex-direction: column;
-        text-align: center;
-    }
-    button[type="submit"] {
-        text-align: center; /* Center align the button */
-    }
-
-    /* Adjusted styles for the "Download CV" button */
-    #contact .contact-right .btn2 {
-        background: #ff004f; /* Blue color for the button */
-        padding: 14px 30px;
-        font-size: 18px;
-        margin-top: 20px; /* Add gap to the button */
-        cursor: pointer;
-        text-decoration: none;
-        color: #fff;
-        border-radius: 6px;
-        margin-left: 0; /* Align to the left */
-    }
-
 }
